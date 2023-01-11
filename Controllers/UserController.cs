@@ -19,7 +19,7 @@ namespace API.Controllers
 
         [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<AppUser>>> GetUser()
         {
             var users = await _context.Users.ToListAsync();
             return users;
